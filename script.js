@@ -1,4 +1,1 @@
-const items=[...document.querySelectorAll('.project,.about,.hero-bottom')];
-items.forEach(el=>el.classList.add('reveal'));
-const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.12});
-items.forEach(el=>io.observe(el));
+const els=[...document.querySelectorAll('.case,.about .manifesto,.facts,.principle')];els.forEach(x=>x.classList.add('reveal'));const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});els.forEach(x=>io.observe(x));const dot=document.querySelector('.cursor-dot');window.addEventListener('pointermove',e=>{dot.style.left=e.clientX+'px';dot.style.top=e.clientY+'px'});
